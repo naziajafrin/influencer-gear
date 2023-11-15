@@ -90,13 +90,15 @@ body{
 }
 .brands{
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     gap: 20px;
     justify-content: space-between;
     padding: 30px 0 30px;
 }
 .brand{
-    height: 25px;
-    width: 25px;
+    /* height: 25px;
+    width: 25px; */
 }
 
 /* popular collection */
@@ -232,12 +234,19 @@ body{
 }
 
 
-/* responsive  */
+/* ------------- responsive -------------  */
 
 @media only screen and (max-width: 576px) {
 
+    .body{
+        margin: 30px 25px 0;
+    }
     .body-container{
         width: 100%;
+    }
+    p,h3{
+        margin: 0;
+        padding: 0;
     }
     .web{
         display: none;
@@ -255,7 +264,8 @@ body{
         display: flex;
         flex-direction: column-reverse;
         gap: 30%;
-        /* align-items: center; */
+        margin-top: 30px;
+        text-align: center;
     }
     .hero img{
         height: 190px;
@@ -263,10 +273,9 @@ body{
     }
     .hero-img{
         height: 100%;
-        width: 50%;
         border: 3px solid #F1E4FF;
         border-radius: 300px;
-        padding: 20px;
+        padding: 5%;
     }
     .title, .desc{
         text-align: center;
@@ -274,4 +283,56 @@ body{
     .title{
         font-size: 1.8em;
     }
+    .hero-detail{
+        margin-top: 8%;
+    }
+    .hero-btn{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    /* ---------- brands ----------  */
+    .container{
+        margin-top: 5%;
+    }
+    .hr-mini{
+        display: none;
+    }
+
+    /* --------- popular collection ------------ */
+
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .card{
+        padding: 5% 5% 10%;
+    }
+    .card-banner{
+        text-align: center;
+    }
+    .card-banner img{
+        width: 98%;
+        padding: 0;
+    }
+
+    /* --------- feature ---------- */
+
+    .feature{
+        display: flex;
+        flex-direction: column-reverse;
+        column-gap: 3%;
+    }
+    .feature-details{
+        align-items: center;
+        padding: 0 5%;
+    }
+    .feature-title, .feature-info{
+        text-align: center;
+        padding: 3% 0;
+    }
+    .feature-btn{
+        padding: 5% 0 0;
+    }
+    
 }
